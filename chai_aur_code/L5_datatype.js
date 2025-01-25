@@ -36,8 +36,9 @@ console.log(typeof undefine);                     //undefine
 console.table( [age,fullName,mobileno,id,gender,otherName,single]);          //use to console multiple value in tabular form
 
 
-
-
+//<--two way of execute typeof opration-->
+console.log(typeof age);                //first way
+console.log(typeof (age));              //second way
 
 
 
