@@ -32,7 +32,7 @@ let speakInNumber = Number(speak);
 console.log(typeof speakInNumber);               //return number
 console.log(speakInNumber);                      //return 1
 
-//<-----conversion---->
+//<-----conversion in number---->
 // "28" => 28
 // "twenty"=> NaN
 //null => 0
@@ -43,7 +43,7 @@ console.log(speakInNumber);                      //return 1
 
 /*let isLoggedIn=1;                                 
 let booleanIsLoggedIn=Boolean(isLoggedIn);
-console.log(booleanIsLoggedIn);   */                 //return true
+console.log(booleanIsLoggedIn);  */                 //return true
 
 /*let isLoggedIn="";                                 
  let booleanIsLoggedIn=Boolean(isLoggedIn);
@@ -53,7 +53,7 @@ let isLoggedIn="Aman";
 let booleanIsLoggedIn=Boolean(isLoggedIn);
 console.log(booleanIsLoggedIn);                       //return true
 
-//<-------conversion-------->
+//<-------conversion Boolean-------->
 //1 => true;  0 =>false
 //"" => false
 //"Aman" => true
@@ -61,10 +61,20 @@ console.log(booleanIsLoggedIn);                       //return true
 
 //<----------------------------------------------->
 
-let someValue=35;
+/*let someValue=35;
 let stringValue=String(someValue);
 console.log(typeof stringValue);                       //return string
-console.log(stringValue);                              //return 35
+console.log(stringValue);        */                  //return 35
+
+let someValue=true;
+let stringValue=String(someValue);
+console.log(typeof stringValue);                       //return string
+console.log(stringValue);                              //true
+
+//<-------conversion in string---------->
+//35 => 35
+//true => true
+
 
 
 
