@@ -1,7 +1,7 @@
 // JS is a programming language. We use it to give instructions to the computer.
 // console.log use to print 
 
-
+//*js is a dynamicaly type language =>  means at run time it is identify type of variable(number,string,boolean,etc..)
 
 console.log("Aman Soni");        //return Aman Soni       
 console.log(6+2);              //return 8
