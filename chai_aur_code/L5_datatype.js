@@ -10,7 +10,7 @@
 //Symbol => unique
 
 //<------------Non primitive datatype---------->
-//object
+//Array,object,Function
 
 let age=28;
 let fullName="Aman";
