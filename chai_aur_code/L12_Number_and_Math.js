@@ -3,7 +3,7 @@
 const score= 200;                                    //here js detect 100 is number type
 console.log(score);
 
-const balance = new Number(400);                     //*now this is 100% sure 400 is number,   write down on google console and knows all the "Number" method(function), new keyword use to creat an abjectb, here Number type of object is created 
+const balance = new Number(400);                     //*now this is 100% sure 400 is number,   write down on google console and knows all the "Number" method(function) and properties, new keyword use to creat an abjectb, here Number type of object is created 
 console.log(balance);
 
 // accese all the method by using dot(.)

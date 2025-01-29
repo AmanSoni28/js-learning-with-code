@@ -8,7 +8,7 @@ console.log(`Hello my name is ${name} and my age is ${age}`);                   
 
 // <-------------------------------------------------------------------------------------------------------------------------------------->
 
-const brotherName = new String("Ankit");               //*write down on google console and knows all the string method(function)       //new keyword is used to create an instance of an object that has a constructor function      
+const brotherName = new String("Ankit");               //*write down on google console and knows all the string method(function) and properties     //new keyword is used to create an instance of an object that has a constructor function      
 
 // accese all the method by using dot(.)
 console.log(brotherName[2]);                          //return k
