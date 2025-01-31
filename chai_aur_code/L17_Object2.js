@@ -18,7 +18,6 @@ console.log(instaUser["Name"]);                 //return Aman,   2 way by square
 
 
 const faceUser = {}
-
 faceUser.id= "123abc";
 faceUser.name= "Shubham";
 faceUser.isLoggIn= false;
@@ -49,10 +48,11 @@ console.log(newuser.fullName.userName.firstName);       //return Abhinav
 
 
 //<---------------merge objects-------------------->
+
 const obj1 = { 1: "a" , 2: "b"};
 const obj2 = { 3: "c" , 4: "d"};
 
-const obj3 = { obj1 , obj2};                         
+const obj3 = { obj1 , obj2};                            //*here two object(obj1,obj2) inside of an anther object(obj3) but not merge
 console.log(obj3);                                      //return { obj1: { '1': 'a', '2': 'b' }, obj2: { '3': 'c', '4': 'd' } }
 
 const obj4 =Object.assign({}, obj1, obj2)               //assign obj1 and obj2 in {} 

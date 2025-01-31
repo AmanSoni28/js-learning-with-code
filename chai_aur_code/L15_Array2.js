@@ -7,7 +7,7 @@ console.log(marvel_heros[3]);                        //return [ 'superman', 'fla
 console.log(marvel_heros[3][1]);                     //return flash
 marvel_heros.pop();                                  
 
-const all_heros=marvel_heros.concat(dc_heros);       //ombines two or more arrays. This method returns a new array without modifying any existing arrays
+const all_heros=marvel_heros.concat(dc_heros);       //combines two or more arrays. This method returns a new array without modifying any existing arrays
 console.log(all_heros);                              //return [ 'thor', 'Ironman', 'spiderman', 'superman', 'flash', 'batman' ]
 
 // best way of merge two or more arrays by spread operator

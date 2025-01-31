@@ -16,7 +16,7 @@ const heros= [1, 4, "shaktiman", "krish"];
 console.log(heros[3]);                             //return krish
 console.log(typeof heros);                         //return object
 
-const number= new Array(4,5,6,7,8);                // write down on google console and knows all the "Number" method(function) and properties
+const number= new Array(4,5,6,7,8);                // write down on google console and knows all the "Array" method(function) and properties, this is another way of creating array, new Array() creates a new array object.
 console.log(number);                               //[4,5,6,7,8]
 console.log(number.length)                         //return 5
 

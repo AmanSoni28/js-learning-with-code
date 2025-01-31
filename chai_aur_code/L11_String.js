@@ -1,14 +1,17 @@
+/* The String object is used to represent and manipulate a sequence of characters.
+   Strings can contain letters, numbers, symbols, and spaces. */
+
 const name = "aman";
 const age = 23;
 
 console.log("Hello my name is " + name + " and my age is " + age );                     //not a good way 
 
 // by string interpulation
-console.log(`Hello my name is ${name} and my age is ${age}`);                           //we are prefer this         
+console.log(`Hello my name is ${name} and my age is ${age}`);                           //we are prefer backticks (` `),   
 
 // <-------------------------------------------------------------------------------------------------------------------------------------->
 
-const brotherName = new String("Ankit");               //*write down on google console and knows all the string method(function) and properties     //new keyword is used to create an instance of an object that has a constructor function      
+const brotherName = new String("Ankit");               //*write down on google console and knows all the string method(function) and properties, new keyword is used to create an instance of an object that has a constructor function      
 
 // accese all the method by using dot(.)
 console.log(brotherName[2]);                          //return k
