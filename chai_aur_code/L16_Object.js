@@ -68,5 +68,5 @@ const newobj = {
 }
 //it is access by only square bracket 
 console.log(newobj[mySym]);                      //return Hii, here we does not use ""                 
-console.log(newobj);                             //return { [Symbol(Hello!)]: 'Hii' }, shows key is Symbol
+console.log(newobj);                             //return { [Symbol(Hello!)]: 'Hii' }, this shows key is Symbol
 
