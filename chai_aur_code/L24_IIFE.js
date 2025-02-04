@@ -12,7 +12,6 @@ Encapsulation: It helps create private variables that cannot be accessed from ou
 Execution Context: Since it runs immediately, it is useful for initialization tasks.
 <----------------------------------------------------------------------------------------------------------------------- */
 
-
 (function data()                              //named IIFE
 {
        console.log("Hello my name is Aman");
