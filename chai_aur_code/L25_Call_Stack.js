@@ -9,7 +9,7 @@ The Call Stack is a LIFO (Last In, First Out) data structure that manages functi
 ✅ JavaScript uses a single-threaded execution model, meaning only one function executes at a time.
 
 3. Diagram Explanation:
-Example Code:
+Example Code:                                                                                            */
 
 function first() {
   second();
@@ -27,6 +27,7 @@ function third() {
 
 first();
 
+/*
 4. Call Stack Execution Diagram:
 (Step 1) – first() is called
 📌 Stack: [ first ]
@@ -58,7 +59,6 @@ function recursion() {
 recursion(); // Causes stack overflow
 
 💡 Conclusion:
-
 JavaScript uses a single call stack for synchronous function execution.
 Functions follow LIFO (Last In, First Out) execution.
 Recursive functions should have a base case to prevent stack overflow.      */
