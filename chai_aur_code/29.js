@@ -44,6 +44,5 @@ console.log(map1.size);        //output: 3
 
 map1.delete('b');
 
-console.log(map1.size);        //output: 2
-
+console.log(map1.size);        //output: 2              */
 
