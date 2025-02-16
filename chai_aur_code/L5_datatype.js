@@ -25,7 +25,7 @@ console.log(typeof fullName);                    //string
 console.log(typeof mobileno);                    //bigint
 console.log(typeof id);                          //symbol
 console.log(typeof gender);                      //undefined
-console.log(typeof otherName);                   //object
+console.log(typeof otherName);                   //*object
 console.log(typeof single);                      //boolean
 
 console.log(typeof "Shubham");                    //string

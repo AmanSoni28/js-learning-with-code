@@ -14,12 +14,12 @@ console.log("02">1);                        //return true
 
 console.log(null>0);                        //return false
 console.log(null<0);                        //return false
-console.log(null==0);                       //return false
-console.log(null>=0);                       //return true
+console.log(null==0);                       //*return false
+console.log(null>=0);                       //*return true
 
 /*The reason is that an equality check == and comparisons >,<,>=,<= work differently.         <= most imp line
 Comparisons convert null to a number, treating it as 0.
-That's why (16)null>=0 is true and (15)null>0 is false.   */ 
+That's why (18)null>=0 is true and (15)null>0 is false.   */ 
 
 
 
