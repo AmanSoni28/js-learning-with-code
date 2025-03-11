@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(0,0,0);
+            color : white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="23" class="twenty">DOM learning on chai aur code<span style="display: none">Test Text</span></h1>
+        <h1 id="A" class="twenty">DOM learning on chai aur code<span style="display: none">Test Text</span></h1>
+         <h2 id="B">My name is aman</h2>
+         <h2 id="B">My name is ankit</h2>
+         <h2 id="B">My name is khushi</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+    <ol>
+        <li class="listitem">12</li>
+        <li class="listitem">15</li>
+        <li class="listitem">18</li>
+        <li class="listitem">20</li>
+    </ol>
+    
+</body>
+</html>
+
+<!--+++++++++++++++++++++++++++++All code given below written inside of inspect of this page+++++++++++++++++++++++++++++++++++++++++>
+
+document.getElementById(23);                  // <h1 id="23" class="twenty">"DOM learning on chai aur code"<span style="display: none">Test Text</span></h1>
+document.getElementById(23).id;               //'23'
+document.getElementById(23).className;        //'twenty'
+
+<++getAttribute =>use to take attributr++>
+document.getElementById(23).getAttribute("class");         //'twenty'
+
+<++++setAttributr =>use to insert new attriute +++++++>
+document.getElementById(23).setAttribute("class","AMAN");             //chnge the class=> class="AMAN";
+document.getElementById(23).setAttribute("class","AMAN","ANKIT");     //chnge the class=> class="AMAN ANKIT";
+
+const name=document.getElementById(23);
+name;                                            //<h1 id="23" class="twenty">"DOM learning on chai aur code"<span style="display: none">Test Text</span></h1>
+name.style.backgroundColor="red";                //color will be red
+name.style.padding="25px";                
+name.innerText;                                  //'DOM learning on chai aur code',  note=>show which is visible
+name.textContent                                 //'DOM learning on chai aur codeTest Text',     note=>show all text
+name.innerHTML                                   //'DOM learning on chai aur code<span style="display: none">Test Text</span>'      note=>show text as well as html tags
+
+
+
+note:'querySelector' Selects the first element only
+document.querySelector("#A");             //<h1 id="A" class="twenty">DOM learning on chai aur code<span style="display: none">Test Text</span></h1>
+document.querySelector(".twenty")         //<h1 id="A" class="twenty">DOM learning on chai aur code<span style="display: none">Test Text</span></h1>
+document.querySelector("h2");             //<h2 id="B">My name is aman</h2>,     note: querySelector Selects the first <h2> element only
+
+const list=document.querySelector("ul"); 
+const item1=list.querySelector("li");
+item1.style.backgroundColor="red";          
+item1.innerText="five";
+
+
+note: querySelectorAll Select the all element
+document.querySelectorAll("li");           //NodeList(3) [li, li, li], gives NodeList which is not pure Array but some properties of array follow which is given in prototype
+const itemlist=document.querySelectorAll("li");
+
+itemlist.style.color="green";              //TypeError: Cannot set properties of undefined
+
+itemlist[0].style.color="green";  
+itemlist[2].style.color="green";  
+
+itemlist.forEach(function(l){               //NodeList support forEach loop ,but not support map
+    l.style.backgroundColor="yellow";
+});
+
+
+document.getElementsByClassName("listitem");    //HTMLCollection [],    which is not NodeList
+const templist=document.getElementsByClassName("listitem");
+
+note: HTMLCollection does not support any loop
+for using loop we convert the HTMLCollection in Array
+
+Array.from(temolist);            //now we use all properties of array on HTMLCollection
+
+const newtemplist=Array.from(temolist);
+newtemplist.forEach((A)=>{
+    A.style.color="orange";
+});

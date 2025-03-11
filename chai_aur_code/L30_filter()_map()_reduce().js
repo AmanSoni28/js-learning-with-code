@@ -5,10 +5,11 @@ const mynum=num.forEach((item)=>{                  //forEach assing(return) noth
 });            
 console.log(mynum);                                //output: undefined
 
-/*In JavaScript, the filter() method is used on arrays to create a new array containing elements that pass a specific test (a function you provide).
+/*<-----------------filter() method----------------------->
+  In JavaScript, the filter() method is used on arrays to create a new array containing elements that pass a specific test (a function you provide).
   It does not modify the original array.           */
 
-// const number=num.filter((item)=>{return item>4});       //filtor method also has the callback function
+// const number=num.filter((item)=>{return item>4});       //filter method also has the callback function
 const number=num.filter((item)=>(item>4));                //*here no need of return keyword because we used () bracket but when we use {} then we need to use return keyword
 console.log(number);                    //output [ 5, 6, 7, 8, 9, 10 ]
 
@@ -53,8 +54,8 @@ console.log(book.filter((obj)=>{
   return obj.genre==="os" && obj.publish>=1900 ;
 })); 
 
-
-/*The .map() method in JavaScript is an array method used to create a new array by applying a function to each element of an existing array. 
+/*<------------------map() method-------------------->
+The .map() method in JavaScript is an array method used to create a new array by applying a function to each element of an existing array. 
 It does not modify the original array but returns a new one. 
 array.map(callback(currentValue, index, array), thisArg);       */
 
@@ -75,7 +76,7 @@ const array=arr
 console.log(array);                    //output [ 12, 13, 14, 15 ]
 
 
-// <---------------reduce method------------------->
+// <---------------reduce() method------------------->
 /* The reduce() method in JavaScript is used to iterate over an array and reduce it to a single value. 
    It applies a function to each element of the array, accumulating a result along the way. 
    array.reduce(callbackFunction, initialValue); */                
