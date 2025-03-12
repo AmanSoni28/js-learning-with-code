@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+    <ul class="lang">
+       <li>javascript</li>
+       <li>React</li>
+    </ul>
+</body>
+<script>
+    // <++++++++++++++++++++ Add Elements +++++++++++++++++++++>
+
+     // here using innerHTML so whole tree is triverse when function is call
+    function addLang(langName){
+        const li= document.createElement("li");                //create new lement 'li'
+        li.innerHTML=`${langName}`
+        li.style.color="pink";
+        document.querySelector(".lang").appendChild(li);       //append the 'li' with 'lang'
+    }
+    addLang("python");
+    addLang("Math");
+    addLang("C++");
+    
+     // optimized way ( try to use NodeList),here not triverse whole tree. create 'TextNode' and append with 'lang'
+
+     function addoptilang(langName){
+       const li= document.createElement("li");                      //create new lement 'li'
+       li.appendChild(document.createTextNode(`${langName}`))       //create new 'TextNode' and append with 'li'
+       li.style.color="green";
+       document.querySelector(".lang").appendChild(li);             //append the 'li' with 'lang'
+     }
+     addoptilang("rubi")
+     addoptilang("C")
+
+    // <++++++++++++++++++++++++++++++ Edit Elements +++++++++++++++++++++++++++++++>
+ 
+    const secondLang=document.querySelector("li:nth-child(2)");                      //select second 'li'
+    // secondLang.innerHTML = "Hindi";       //this is currect but not optimized aproach
+    const newli=document.createElement("li");
+    newli.textContent="English";
+    secondLang.replaceWith(newli);                 //React replece with English
+
+    const firstLang=document.querySelector("li:first-child");
+    firstLang.outerHTML="<li>java</li>";           //javascript replece with java
+
+    // <++++++++++++++++++++++ remove Element ++++++++++++++++++++++++>
+
+      const lastLang=document.querySelector("li:last-child");          //select last 'li'
+      lastLang.remove();                                               //remove last 'li'("C")
+
+</script>
+</html>
