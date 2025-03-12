@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color:rgb(236, 103, 103);">
+    
+</body>
+<script>
+    const divelement=document.createElement("div");                           //create new div
+    console.log(divelement);                                                  //<div></div>
+    // const addText = document.createTextNode("Hello My Name Is Aman");      //Creates a text node.
+    // div.appendChild(addText)                                               //Appends text to the <div>
+    divelement.innerText="Hello My Name Is Aman";            //set 'text' in created div
+    divelement.className="AMAN";                             //<div class="AMAN"></div>
+    divelement.id=Math.round(Math.random() * 10);            //<div class="AMAN" id="2"></div>
+    divelement.setAttribute("NAM","ANKIT");                  //<div class="AMAN" id="2" nam="ANKIT"></div>
+    divelement.style.backgroundColor="yellow";               //set style in created div by making backgroungColor yellow
+    divelement.style.padding="25px";                         //set padding in created div
+    document.body.appendChild(divelement);                   //Appends the created element in document    
+</script>
+</html>
+
+
+<!-- note: line (14+15) or line 16 both doing same work -->
