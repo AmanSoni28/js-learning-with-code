@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"   alt="" ></li>   <!-- onclick="alert('AMAN')" avoid this aproach -->
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" </li>    
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById("owl").onclick=function(){            //onclick is a event,but this is not good aproach
+    //     alert("owl clicked");      
+    // }
+    document.getElementById("owl").addEventListener("click",function(){       // this is the best aproach because at addEventListener we can add many event(click,dbclick,mouseout,mouseover etc)
+        alert("owl clicked"); 
+    },false)          //by default third parameter is false
+
+    document.getElementById("owl").addEventListener("click",function(e){       
+        console.log(e);     //event is an object in js,and contain methods and properties
+    })
+
+    /* note: these are important methods and properties of Event to learn 
+       type, timestamp, defaultPrevented
+       target, toElement, srcElement, currentTarget,
+       clientX, clientY, screenX, screenY
+       altkey, ctrlkey, shiftkey, keyCode                  */
+
+   /* Event propogation:
+   Event propagation determines how events flow through the DOM tree.
+   1.Event Bubbling => first inner event run then after outer event run     */
+
+    /* document.getElementById('images').addEventListener('click', function(e){
+       console.log("clicked inside the ul");
+    }, false)
+       document.getElementById('river').addEventListener('click', function(e){
+       console.log(" river clicked");
+     }, false)   */
+
+    // note: when we click rever(image) then first river clicked run then clicked inside the ul is run 
+
+
+    // 2. Event Capturing => first outer event run then after inner event run
+
+   /* document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, true)
+      document.getElementById('japan').addEventListener('click', function(e){
+        console.log(" japan clicked");
+     }, true)    */           
+
+    // note: when we click japan(image) then first 'clicked inside the ul' run then 'japan clicked' is run       
+    
+
+    // if we want to stop propogation
+   /* document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+     }, false)
+    document.getElementById('photoshop').addEventListener('click', function(e){
+        e.stopPropagation();
+        console.log("photoshop clicked");
+    }, false)   */
+
+    //  note: now when we click photoshop(image) then only 'photoshop clicked' is run
+    
+
+ document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault();                 //now are prevent the page load to server
+        console.log("google clicked");
+    }, false) 
+
+
+    document.getElementById('images').addEventListener('click', function(e){
+        // console.log(e);                        //note: check one by one all four
+        // console.log(e.target);
+        // console.log(e.target.parentNode);
+        // console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()                                 //remove the image when we click
+             //removeIt.parentNode.removeChild(removeIt)      //it is another way to remove the image when we click
+        }
+    })  
+</script>
+</html>
+
+<!-- Definition of Events in JavaScript *
+Events in JavaScript are actions or occurrences that happen in the browser, triggered by user interactions (like clicks, key presses, or mouse movements) or system-generated actions (like page load or API responses). 
+Events follow the event propagation model, which includes event capturing, event bubbling, and event delegation. JavaScript provides methods like addEventListener() to handle and control events efficiently. -->
