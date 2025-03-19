@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // <-------declaration  - setTimeout()--------------> 
+
+    /* setTimeout(function (){
+        console.log("AMAN");
+       },2000);                     */  // response after 2 seconds (print- AMAN)          
+
+    // or
+
+    /* const Name = function (){
+         console.log("ANKIT");
+     }
+     setTimeout(Name,2000);     */
+
+
+    /* const changeText=function(){
+         const change=document.querySelector("h1").innerHtml="learning setTimeout";
+         console.log(change);
+     };
+     setTimeout(changeText,4000);            */   // after 5 second the text will change
+
+
+    /*const changeText=function(){
+        const change=document.querySelector("h1").innerHtml="learning setTimeout";
+        console.log(change);
+    };
+    const modi=setTimeout(changeText,4000);     // after 5 second the text will change
+
+    document.querySelector("#stop").addEventListener("click",function(){
+        clearTimeout(modi);          //use to remove setTimeout function, when we click "stop" button then setTimeout function not work
+        console.log("STOPPED");
+    });                             */
+
+    // <++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>
+    
+    //<------------------declaration  - setInterval()-------------------->
+
+    /* setInterval(function(){                    
+         console.log("hello world", Date.now())            
+     }, 2000)            */
+
+    //or
+
+    /* const hello=function(str){
+          console.log(str, "hello world", Date.now()) 
+      };
+      setInterval(hello,1000,"hii");    */ 
+
+
+     /*const hellow=function(str){
+          console.log(str, "hello world", Date.now()) 
+      };
+      const result= setInterval(hellow,1000,"hii");  
+      
+      clearInterval(result);  */          //now hellow function is not run, because setInterval is remove  
+
+</script>
+</html>
+
+<!--   
+notes:-
+1. setTimeout() :- this is run only once after a specific time
+2. setInterval() :- this is run repeatedly after a specific time (also able to pass parameters)
+3. clearTimeout() :- this is used to clear the setTimeout()
+4. clearInterval() :- this is used to clear the setInterval()  --> 
