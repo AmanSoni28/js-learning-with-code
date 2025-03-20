@@ -1,4 +1,5 @@
-/*
+/* note : diagram part in copy
+
 Default JavaScript Behavior:--
 
 JavaScript -> 1. Synchronous ( Synchronous means one thing at a time then other thing like : one by one execution)
@@ -47,59 +48,24 @@ console.log("Step 3");
  Step 2 (after 2 seconds)
  🔹 Why?
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Change Project</title>
-    <style>
-        body {
-            background-color: rgb(0, 0, 0);
-            color: white;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Color Change Project</h1>
-    <hr>
-    <button id="start">Start</button><br><br>
-    <button id="stop">Stop</button>
-</body>
-<script>
-    const randomColor = function () {
-        const hex = '0123456789abcdef';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += hex[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
-
-    let IntervalId
-    const startChangingColor = function () {
-        if (!IntervalId) {
-            IntervalId = setInterval(changeBgColor, 1000);
-        }
-        function changeBgColor() {
-            document.body.style.backgroundColor = randomColor()
-        }
-    }
-
-    const stopChangingColor = function () {
-        clearInterval(IntervalId)
-    }
-
-    document.querySelector("#start").addEventListener('click', startChangingColor);
-    document.querySelector("#stop").addEventListener('click', stopChangingColor);
-</script>
-
-</html>
-
  setTimeout is asynchronous. It schedules the function but does not block the next line.
  Step 3 runs immediately, while Step 2 waits for 2 seconds.                 */
+
+
+ console.log("Step 1");
+
+ setTimeout(() => {
+   console.log("Step 2");
+ },0); // Runs after 2 seconds
+ 
+ console.log("Step 3");
+
+ /* Output:
+ Step 1
+ Step 3
+ Step 2
+
+note : because step 2 in is Asynchronous Code so it is in web API then goes in task Queue and goes in call stack then print
 
 /* How to Handle Asynchronous Code?
 There are three main ways to handle async code in JavaScript:
