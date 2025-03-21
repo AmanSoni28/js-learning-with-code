@@ -1,0 +1,37 @@
+<!-- https://randomuser.me  ->  website where many API available
+    "JSON formatter" -> website use to simplify and learn the API -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();       //XMLHttpRequest() this is a method which contain 'readystate' etc, here Create a new XMLHttpRequest object
+    xhr.open('GET', requestUrl)             // Configure it: GET request to fetch data from a URL
+    xhr.send();      //used to send an HTTP request to the server
+    xhr.onreadystatechange = function(){    
+        console.log(xhr.readyState);           
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)     //response from URL comes generaly in string, here we change string to object(JSON)
+            console.log(typeof data);          
+            console.log(data.followers);                   //here fetched the perticular data
+        }
+    }
+</script>
+</html>
+
+<!-- notes:
+readyState property in XMLHttpRequest is used to track the progress of an HTTP request. 
+The onreadystatechange event in XMLHttpRequest is used to track the state changes of the HTTP request.
+responseText is a property of the XMLHttpRequest object that stores the response data from the server as a string. -->
