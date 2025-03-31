@@ -9,17 +9,20 @@
     <title>Document</title>
 </head>
 <body style="background-color: #212121;">
-    0	UNSENT	Client has been created. open() not called yet.
-    1	OPENED	open() has been called.
-    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-    3	LOADING	Downloading; responseText holds partial data.
-    4	DONE	The operation is complete.
+
+    XMLHttpRequest: readyState property
+    Value      State                          Description
+    0	       UNSENT	                Client has been created. open() not called yet.
+    1	       OPENED	                open() has been called.
+    2	       HEADERS_RECEIVED     	send() has been called, and headers and status are available.
+    3	       LOADING             	    Downloading; responseText holds partial data.
+    4          DONE	                    The operation is complete.
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
     const xhr = new XMLHttpRequest();       //XMLHttpRequest() this is a method which contain 'readystate' etc, here Create a new XMLHttpRequest object
     xhr.open('GET', requestUrl)             // Configure it: GET request to fetch data from a URL
-    xhr.send();      //used to send an HTTP request to the server
+    xhr.send();                             //used to send an HTTP request to the server
     xhr.onreadystatechange = function(){    
         console.log(xhr.readyState);           
         if (xhr.readyState === 4) {
