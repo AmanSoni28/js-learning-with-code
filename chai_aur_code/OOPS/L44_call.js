@@ -1,4 +1,4 @@
-//remove the comment from line (3-15) and comment the line (17-30) and run then 
+//note: remove the comment from line (3-16) and comment the line (19-33) and run it and after that comment line from (3-16) and run code from line (19-33)
 
 // function SetUsername(username){
 //     this.username=username;
