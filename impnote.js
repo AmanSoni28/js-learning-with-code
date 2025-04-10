@@ -10,4 +10,4 @@
 
 
 
-// JavaScript was invented by Brendan Eich in 1995.
+// JavaScript was invented by 'Brendan Eich' in 1995.
